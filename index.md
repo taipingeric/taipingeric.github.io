@@ -25,11 +25,15 @@
 * Mobile Application Developer, Yowoo Technology Inc.
   * 2015/10 - 2018/05
 
-## Course
+## Courses / Lectures
 
 * An Introduction to AI, Department of Chemical and Materials Engineering, Chang Gung University
   * 2022/10, 2021/10
-* Machine Learning adn Deep Learning, Taiwan AI Academy
+* AI in Industrial Applications, Department of Chemical and Materials Engineering, Tam Kang University
+  * 2022/05
+* AI and Deep Learning for Medical Imaging, College of EECS, NTU
+  * 2022/04 
+* Machine Learning and Deep Learning, Taiwan AI Academy
   * 2018 -
 * An Introductin to AI, Tibame
   * 2018 - 
