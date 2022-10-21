@@ -1,6 +1,7 @@
 ## Introduction
   * a.k.a SAI 李晨民
-  * 
+  * Passions in AI.
+  * Stay hungry, stay foolish.
 
 ## Education
 
