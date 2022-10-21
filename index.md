@@ -1,3 +1,5 @@
+![image](https://github.com/taipingeric/taipingeric.github.io/blob/master/assets/FB.jpg)
+
 ## Introduction
   * a.k.a SAI 李晨民
   * Passions in AI.
