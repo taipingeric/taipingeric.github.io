@@ -1,3 +1,7 @@
+# 李智揚 
+* a.k.a SAI 李晨民
+* 
+
 ## Education
 
 * PhD, Computer Science and Information Engineering, NTU
@@ -34,11 +38,11 @@
 
 ## Links
 
-GitHub: https://github.com/taipingeric
+[GitHub](https://github.com/taipingeric)
 
-Linkedin: https://www.linkedin.com/in/chihyang-li-a883b375/
+[LinkedIn](https://www.linkedin.com/in/chihyang-li-a883b375/)
 
-Slideshare: https://www.slideshare.net/ChihyangLi
+[Slideshare](https://www.slideshare.net/ChihyangLi)
 
 ## Contact
 
