@@ -1,68 +1,73 @@
 ![image](https://raw.githubusercontent.com/taipingeric/taipingeric.github.io/master/assets/FB.jpg)
 
-## Introduction
+## 簡介
   * a.k.a SAI 李晨民
   * Passions in AI.
   * Stay hungry, stay foolish.
 
-## Education
+## 學歷
 
-* PhD, Computer Science and Information Engineering, NTU
+* 博士班, 台大資工所
   * 2020 -
-  * Advisor: Ruey-Feng Chang
-* MS, Biomedical Electronics and Bioinformatics, NTU
+  * 指導教授: Ruey-Feng Chang 張瑞峰
+* 碩士班, 台大生醫電資所
   *   2019 -
-  * Direct pursuit of PhD Program
-* BS, Mechanical Engineering, NTU
+  *  逕讀博士班
+* 學士, 台大機械系
   *   2006 - 2010
 
-## Experience
+## 經歷
 
-* Course lecturer, TibaMe
+* 課程講師, TibaMe緯育
     *   2018 -
 
-* AI Engineer, Taiwan AI Academy
+* AI 工程師, 台灣人工智慧學校
   * 2018/05 -
 
-* Mobile Application Developer, Yowoo Technology Inc.
+* iOS工程師, 有無科技
   * 2015/10 - 2018/05
 
-## Courses / Lectures
+## 課程 / 演講
 
-* An Introduction to AI, Department of Chemical and Materials Engineering, Chang Gung University
+* AI概論, 長庚大學化材系
   * 2022/10, 2021/10
-* AI in Industrial Applications, Department of Chemical and Materials Engineering, Tam Kang University
+* AI於產業應用, 淡江化材系
   * 2022/05
-* AI and Deep Learning for Medical Imaging, College of EECS, NTU
+* AI與深度學習於醫學影像, 台大電資學院
   * 2022/04 
-* Machine Learning and Deep Learning, Taiwan AI Academy
+* AI臨床醫學影像分析: PyTorch實戰班, 晨慧科技
+  * 2021/10
+* AI, 機器學習與深度學習, 台灣人工智慧學校
   * 2018 -
-* An Introductin to AI, Tibame
+* AI課程, Tibame緯育
   * 2018 - 
-  * AI on Medical Images, AI on Defect Inspection
-  * Public Affairs Youth Talent Training Plan
+  * AI醫學影像分析
+  * AI醫療影像腫瘤偵測實作班, AIGO
+  * AI產品瑕疵檢測, AIGO
+  * AI影像技術應用工程師就業培訓班
+  * AI智慧應用開發實戰
   * PyTorch, Tensorflow, Keras, Python
 
-## Challenges / Honors
+## 競賽
 
 * [MICCAI 2022 SAR-RARP50](https://www.synapse.org/#!Synapse:syn27618412/wiki/619479)
   * Surgical instrumentation segmentation and Action Recognition on Robot-Assisted Radical Prostatectomy Challenge
-  * Multi-Task: 2nd
-  * Segmentation: 4th
-  * Team name: AIA_Noobs
+  * 多任務: 2nd
+  * 影像切割: 4th
+  * 隊名: AIA_Noobs
   * 2022/9/18
-* 2018 National Palace Museum Hackathon
-  * 1st place using 
-  * style transfer
-* 2018 AIA 1st Project Competition
-    *  Honorable Mention 
-    *  AOI: Defect inspection
+* 2018 故宮黑客松
+  * 第1名
+  * 影像風格轉換
+* 2018 AIA 第一屆技術班 專題競賽
+    *  佳作
+    *  金屬表面瑕疵檢測
 
-## Major
+## 專長
 
-Deep Learning, AI, Medical Images, Defect Inspection, ECG
+深度學習、人工智慧、醫學影像、瑕疵檢測、心電圖
 
-## Links
+## 連結
 
 [GitHub](https://github.com/taipingeric)
 
@@ -70,6 +75,6 @@ Deep Learning, AI, Medical Images, Defect Inspection, ECG
 
 [Slideshare](https://www.slideshare.net/ChihyangLi)
 
-## Contact
+## 聯絡資訊
 
 taipingeric@gmail.com
