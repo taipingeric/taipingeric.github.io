@@ -15,6 +15,9 @@
 
 ## Experience
 
+* Course lecturer, TibaMe
+    *   2018 -
+
 * AI Engineer, Taiwan AI Academy
   * 2018/05 -
 
@@ -32,7 +35,11 @@
   * Team name: AIA_Noobs
   * 2022/9/18
 * 2018 National Palace Museum Hackathon
-  * 1st place using style transfer technique in deep learning
+  * 1st place using 
+  * style transfer
+* 2018 AIA 1st Project Competition
+    *  Honorable Mention 
+    *  AOI: Defect inspection
 
 ## Major
 
