@@ -1,4 +1,4 @@
-![image](/assets/FB.jpg)
+![image]([/assets/FB.jpg](https://raw.githubusercontent.com/taipingeric/taipingeric.github.io/master/assets/FB.jpg))
 
 ## Introduction
   * a.k.a SAI 李晨民
