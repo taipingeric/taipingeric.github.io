@@ -28,14 +28,14 @@
 ## Course
 
 * An Introduction to AI, Department of Chemical and Materials Engineering, Chang Gung University
- * 2022/10, 2021/10
+  * 2022/10, 2021/10
 * Machine Learning adn Deep Learning, Taiwan AI Academy
- * 2018 -
+  * 2018 -
 * An Introductin to AI, Tibame
- * 2018 - 
- * AI on Medical Images, AI on Defect Inspection
- * Public Affairs Youth Talent Training Plan
- * PyTorch, Tensorflow, Keras, Python
+  * 2018 - 
+  * AI on Medical Images, AI on Defect Inspection
+  * Public Affairs Youth Talent Training Plan
+  * PyTorch, Tensorflow, Keras, Python
 
 ## Challenges / Honors
 
