@@ -39,7 +39,7 @@
   * 2018 -
 * An Introductin to AI, Tibame
   * 2018 - 
-  * AI on Medical Images, AI on Defect Inspection
+  * AI on Medical Images, AI on Defect Inspection (AIGO)
   * Public Affairs Youth Talent Training Plan
   * PyTorch, Tensorflow, Keras, Python
 
