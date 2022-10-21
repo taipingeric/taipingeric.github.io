@@ -1,4 +1,4 @@
-[[English]](https://github.com/taipingeric/taipingeric.github.io/blob/master/index.md)
+[[English]](https://taipingeric.github.io/)
 
 ![image](https://raw.githubusercontent.com/taipingeric/taipingeric.github.io/master/assets/FB.jpg)
 
