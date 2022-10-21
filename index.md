@@ -54,6 +54,8 @@
 
 ## Major
 
+Deep Learning, AI, Medical Images, Defect Inspection, ECG
+
 ## Links
 
 [GitHub](https://github.com/taipingeric)
