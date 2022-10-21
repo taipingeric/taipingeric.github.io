@@ -26,9 +26,17 @@
 
 ## Course
 
+* An Introduction to AI, Department of Chemical and Materials Engineering, Chang Gung University
+ * 2022/10, 2021/10
+* Machine Learning adn Deep Learning, Taiwan AI Academy
+ * 2018 -
+* An Introductin to AI, Tibame
+ * 2018 - 
+ * AI on Medical Images, AI on Defect Inspection
+ * Public Affairs Youth Talent Training Plan
+ * PyTorch, Tensorflow, Keras, Python
 
-
-## Challenge
+## Challenges / Honors
 
 * [MICCAI 2022 SAR-RARP50](https://www.synapse.org/#!Synapse:syn27618412/wiki/619479)
   * Surgical instrumentation segmentation and Action Recognition on Robot-Assisted Radical Prostatectomy Challenge
