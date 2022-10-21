@@ -19,7 +19,16 @@
 
 ## Course
 
+## Challenge
 
+* [MICCAI 2022 SAR-RARP50](https://www.synapse.org/#!Synapse:syn27618412/wiki/619479)
+  * Surgical instrumentation segmentation and Action Recognition on Robot-Assisted Radical Prostatectomy Challenge
+  * Multi-Task: 2nd
+  * Segmentation: 4th
+  * Team name: AIA_Noobs
+  * 2022/9/18
+* 2018 National Palace Museum Hackathon
+  * 1st place using style transfer technique in deep learning
 
 ## Major
 
