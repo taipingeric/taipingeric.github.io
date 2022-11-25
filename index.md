@@ -29,8 +29,10 @@
 * Mobile Application Developer, Yowoo Technology Inc.
   * 2015/10 - 2018/05
 
-## Courses / Lectures
+## Courses / Lectures / Talks
 
+* AI Applications to Medical Images, Department of Information Technology and Management, Tzu Chi University
+  * 2022/10/28
 * An Introduction to AI, Department of Chemical and Materials Engineering, Chang Gung University
   * 2022/10, 2021/10
 * AI in Industrial Applications, Department of Chemical and Materials Engineering, Tam Kang University
