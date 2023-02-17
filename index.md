@@ -31,6 +31,8 @@
 
 ## Courses / Lectures / Talks
 
+* AI AOI in manufacturing, Chunghwa Telecom
+  * 2023/2/8
 * AI Applications to Medical Images, Department of Information Technology and Management, Tzu Chi University
   * 2022/10/28
 * An Introduction to AI, Department of Chemical and Materials Engineering, Chang Gung University
