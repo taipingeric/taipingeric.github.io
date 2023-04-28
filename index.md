@@ -30,7 +30,10 @@
   * 2015/10 - 2018/05
 
 ## Courses / Lectures / Talks
-
+* What High School Students Should Know About AI: Present and Future, VICTOR CULTURE AND EDUCATION CO.
+  * 2023/4/26
+* AI in Healthcare Development and Application, VICTOR CULTURE AND EDUCATION CO.
+  * 2023/4/25
 * AI AOI in manufacturing, Chunghwa Telecom
   * 2023/2/8
 * AI Applications to Medical Images, Department of Information Technology and Management, Tzu Chi University
