@@ -1,6 +1,6 @@
 remote_theme: pages-themes/cayman@v0.2.0
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
-google-analytics: G-JD2D5FFLFR
+google_analytics: G-JD2D5FFLFR
 title: Chih-Yang Li 李智揚
 description: Personal Website
