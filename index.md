@@ -30,6 +30,8 @@
   * 2015/10 - 2018/05
 
 ## Courses / Lectures / Talks
+* 3AI Summer Camp, 1221 Co., Ltd., Penghu Ocean Foundation.
+  * 2023/Jul, Aug
 * AI AOI in manufacturing, Chunghwa Telecom
   * 2023/2/8, 2023/6/5
 * What High School Students Should Know About AI: Present and Future, VICTOR CULTURE AND EDUCATION CO.
