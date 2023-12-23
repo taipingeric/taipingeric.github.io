@@ -30,6 +30,8 @@
   * 2015/10 - 2018/05
 
 ## Courses / Lectures / Talks
+* Introduction to Python
+  * 2023/Nov
 * 3AI Summer Camp, 1221 Co., Ltd., Penghu Ocean Foundation.
   * 2023/Jul, Aug
 * AI AOI in manufacturing, Chunghwa Telecom
