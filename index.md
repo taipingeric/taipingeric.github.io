@@ -63,6 +63,7 @@
 
 * [MICCAI 2022 SAR-RARP50](https://www.synapse.org/#!Synapse:syn27618412/wiki/619479)
   * Surgical instrumentation segmentation and Action Recognition on Robot-Assisted Radical Prostatectomy Challenge
+  * [[arxiv paper]](https://arxiv.org/abs/2401.00496)
   * 多任務: 2nd
   * 影像切割: 4th
   * 隊名: AIA_Noobs
