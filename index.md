@@ -59,8 +59,10 @@
   * AI智慧應用開發實戰
   * PyTorch, Tensorflow, Keras, Python
 
-## 競賽
+## 競賽/得獎
 
+* 優秀助教
+  * 112-1 醫學影像處理, 台大資工所
 * [MICCAI 2022 SAR-RARP50](https://www.synapse.org/#!Synapse:syn27618412/wiki/619479)
   * Surgical instrumentation segmentation and Action Recognition on Robot-Assisted Radical Prostatectomy Challenge
   * [[arxiv paper]](https://arxiv.org/abs/2401.00496)
