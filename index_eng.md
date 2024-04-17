@@ -35,7 +35,7 @@
 * 3AI Summer Camp, 1221 Co., Ltd., Penghu Ocean Foundation.
   * 2023/Jul, Aug
 * AI AOI in manufacturing, Chunghwa Telecom
-  * 2023/2/8, 2023/6/5
+  * 2023/2/8, 2023/6/5, 2024/4
 * What High School Students Should Know About AI: Present and Future, VICTOR CULTURE AND EDUCATION CO.
   * 2023/4/26
 * AI in Healthcare Development and Application, VICTOR CULTURE AND EDUCATION CO.
