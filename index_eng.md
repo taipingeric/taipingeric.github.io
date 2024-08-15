@@ -12,24 +12,25 @@
 * PhD, Computer Science and Information Engineering, NTU
   * 2020 -
   * Advisor: Ruey-Feng Chang
-* MS, Biomedical Electronics and Bioinformatics, NTU
-  *   2019 -
-  * Direct pursuit of PhD Program
 * BS, Mechanical Engineering, NTU
   *   2006 - 2010
 
 ## Experience
 
-* Course lecturer, TibaMe
+* Course lecturer
     *   2018 -
 
 * AI Engineer, Taiwan AI Academy
-  * 2018/05 -
+  * 2018/May - 2024/Jul
 
 * Mobile Application Developer, Yowoo Technology Inc.
-  * 2015/10 - 2018/05
+  * 2015/Oct - 2018/May
 
 ## Courses / Lectures / Talks
+* Python x ChatGPT Workflow, Information System Training Program, NTU
+ * 2024/Jul 
+* AI Summer Camp, Information System Training Program, NTU
+ * 2024/Jul 
 * Introduction to Python
   * 2023/Nov
 * 3AI Summer Camp, 1221 Co., Ltd., Penghu Ocean Foundation.
