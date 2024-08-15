@@ -27,9 +27,9 @@
   * 2015/Oct - 2018/May
 
 ## 課程 / 演講
-* Python x ChatGPT 工作流
+* Python x ChatGPT 工作流, 臺灣大學資訊系統訓練班
   * 2024/Jul ~
-* AI實作夏令營
+* AI實作夏令營, 臺灣大學資訊系統訓練班
   * 2024/Jul ~
 * 基礎Python
   * 2023/Nov
