@@ -83,6 +83,8 @@ Deep Learning, AI, Medical Images, Defect Inspection, ECG
 
 [GitHub](https://github.com/taipingeric)
 
+[Youtube](https://www.youtube.com/@fusionlab7360)
+
 [LinkedIn](https://www.linkedin.com/in/chihyang-li-a883b375/)
 
 [Slideshare](https://www.slideshare.net/ChihyangLi)
