@@ -27,10 +27,16 @@
   * 2015/Oct - 2018/May
 
 ## 課程 / 演講
+* AI醫學影像, 中華電信學院
+  * 2024/Sep
+* AI/GenAI 簡介, 同欣電子
+  * 2024/Sep
 * Python x ChatGPT 工作流, 臺灣大學資訊系統訓練班
   * 2024/Jul ~
-* AI實作夏令營, 臺灣大學資訊系統訓練班
+* AI實作營, 臺灣大學資訊系統訓練班
   * 2024/Jul ~
+* AI簡介與實作, 夢想之家基金會
+  * 2024/Apr, Oct
 * 基礎Python
   * 2023/Nov
 * 3AI 探索實作夏令營, 1221青社會, 澎湖海基金會
@@ -42,7 +48,7 @@
 * 人工智慧於醫學影像之發展應用, 慈濟大學資管系
   * 2022/Oct
 * AI概論, 長庚大學化材系
-  * 2022/Oct, 2021/Oct
+  * 2024/Oct, 2022/Oct, 2021/Oct
 * AI於產業應用, 淡江化材系
   * 2022/May
 * AI與深度學習於醫學影像, 台大電資學院
@@ -84,13 +90,7 @@
 
 ## 連結
 
-[GitHub](https://github.com/taipingeric)
-
-[Youtube](https://www.youtube.com/@fusionlab7360)
-
-[LinkedIn](https://www.linkedin.com/in/chihyang-li-a883b375/)
-
-[Slideshare](https://www.slideshare.net/ChihyangLi)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/taipingeric) [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@fusionlab7360) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chihyang-li-a883b375/) [![SlideShare](https://img.shields.io/badge/SlideShare-0077B5?style=for-the-badge&logo=slideshare&logoColor=white)](https://www.slideshare.net/ChihyangLi)
 
 ## 聯絡資訊
 

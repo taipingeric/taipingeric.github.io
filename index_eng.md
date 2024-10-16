@@ -27,28 +27,34 @@
   * 2015/Oct - 2018/May
 
 ## Courses / Lectures / Talks
+* AI in Medical Images, Chunghwa Telecom College
+  * 2024/Sep
+* AI/GenAI Introduction, Tong Hsin Electronic
+  * 2024/Sep
 * Python x ChatGPT Workflow, Information System Training Program, NTU
- * 2024/Jul 
-* AI Summer Camp, Information System Training Program, NTU
- * 2024/Jul 
+ * 2024/Jul ~
+* AI Camp, Information System Training Program, NTU
+ * 2024/Jul ~
+* Introduction to AI and Implementation, House of Dreams Foundation
+  * 2024/Apr, Oct
 * Introduction to Python
   * 2023/Nov
 * 3AI Summer Camp, 1221 Co., Ltd., Penghu Ocean Foundation.
   * 2023/Jul, Aug
 * AI AOI in manufacturing, Chunghwa Telecom
-  * 2023/2/8, 2023/6/5, 2024/4
+  * 2023/Feb, 2023/Jun, 2024/Apr
 * What High School Students Should Know About AI: Present and Future, VICTOR CULTURE AND EDUCATION CO.
-  * 2023/4/26
+  * 2023/Apr
 * AI in Healthcare Development and Application, VICTOR CULTURE AND EDUCATION CO.
-  * 2023/4/25
+  * 2023/Apr
 * AI Applications to Medical Images, Department of Information Technology and Management, Tzu Chi University
-  * 2022/10/28
+  * 2022/Oct
 * An Introduction to AI, Department of Chemical and Materials Engineering, Chang Gung University
-  * 2022/10, 2021/10
+  * 2024/Oct, 2022/Oct, 2021/Oct
 * AI in Industrial Applications, Department of Chemical and Materials Engineering, Tam Kang University
-  * 2022/05
+  * 2022/May
 * AI and Deep Learning for Medical Imaging, College of EECS, NTU
-  * 2022/04 
+  * 2022/Apr
 * Machine Learning and Deep Learning, Taiwan AI Academy
   * 2018 -
 * An Introductin to AI, Tibame
@@ -81,13 +87,7 @@ Deep Learning, AI, Medical Images, Defect Inspection, ECG
 
 ## Links
 
-[GitHub](https://github.com/taipingeric)
-
-[Youtube](https://www.youtube.com/@fusionlab7360)
-
-[LinkedIn](https://www.linkedin.com/in/chihyang-li-a883b375/)
-
-[Slideshare](https://www.slideshare.net/ChihyangLi)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/taipingeric) [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@fusionlab7360) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chihyang-li-a883b375/) [![SlideShare](https://img.shields.io/badge/SlideShare-0077B5?style=for-the-badge&logo=slideshare&logoColor=white)](https://www.slideshare.net/ChihyangLi)
 
 ## Contact
 
