@@ -66,7 +66,8 @@
 ## Challenges / Honors
 
 * Outstanding Teaching Assistant
-  * 112-2 Medical Image Process, CSIE, NTU 
+  * 2024 Spring, Deep Learining on Medical Image, CSIE, NTU
+  * 2023 Fall, Medical Image Process, CSIE, NTU 
 * [MICCAI 2022 SAR-RARP50](https://www.synapse.org/#!Synapse:syn27618412/wiki/619479)
   * Surgical instrumentation segmentation and Action Recognition on Robot-Assisted Radical Prostatectomy Challenge
   * [[arxiv paper]](https://arxiv.org/abs/2401.00496)
