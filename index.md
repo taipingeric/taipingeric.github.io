@@ -68,8 +68,9 @@
 
 ## 競賽/得獎
 
-* 優秀助教
-  * 112-1 醫學影像處理, 台大資工所
+* 優良助教
+  * 112-2 深度學習於醫學影像, 台大資訊學群 
+  * 112-1 醫學影像處理, 台大資訊學群
 * [MICCAI 2022 SAR-RARP50](https://www.synapse.org/#!Synapse:syn27618412/wiki/619479)
   * Surgical instrumentation segmentation and Action Recognition on Robot-Assisted Radical Prostatectomy Challenge
   * [[arxiv paper]](https://arxiv.org/abs/2401.00496)
