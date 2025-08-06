@@ -9,7 +9,7 @@
 
 ## Education
 
-* PhD, Computer Science and Information Engineering, NTU
+* PhD Candidate, Computer Science and Information Engineering, NTU
   * 2020 -
   * Advisor: Ruey-Feng Chang
 * BS, Mechanical Engineering, NTU
