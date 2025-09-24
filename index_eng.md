@@ -17,18 +17,26 @@
 
 ## Experience
 
-* Course lecturer
+* AI / Python Course lecturer
     *   2018 -
 
 * AI Engineer, Taiwan AI Academy
   * 2018/May - 2024/Jul
 
-* Mobile Application Developer, Yowoo Technology Inc.
+* iOS Application Developer, Yowoo Technology Inc.
   * 2015/Oct - 2018/May
 
 ## Courses / Lectures / Talks
+* Python / Generative AI
+  * Yuan Ze University, Taipei University of Business
+  * 2025/Jun, Aug
+
+* Edge AI: Introduction and Practical Applications
+  * Taiwan International Cooperation and Development Fund, CHT
+  * 2025/Sep
+
 * AI in Medical Images, Chunghwa Telecom College
-  * 2024/Sep
+  * 2025/Sep, 2024/Sep
 * AI/GenAI Introduction, Tong Hsin Electronic
   * 2024/Sep
 * Python x ChatGPT Workflow, Information System Training Program, NTU
@@ -50,7 +58,7 @@
 * AI Applications to Medical Images, Department of Information Technology and Management, Tzu Chi University
   * 2022/Oct
 * An Introduction to AI, Department of Chemical and Materials Engineering, Chang Gung University
-  * 2024/Oct, 2022/Oct, 2021/Oct
+  * 2025/Sep, 2024/Oct, 2022/Oct, 2021/Oct
 * AI in Industrial Applications, Department of Chemical and Materials Engineering, Tam Kang University
   * 2022/May
 * AI and Deep Learning for Medical Imaging, College of EECS, NTU
@@ -62,6 +70,7 @@
   * AI on Medical Images, AI on Defect Inspection (AIGO)
   * Public Affairs Youth Talent Training Plan
   * PyTorch, Tensorflow, Keras, Python
+  * AI Defect Inspection
 
 ## Challenges / Honors
 
@@ -84,7 +93,7 @@
 
 ## Major
 
-Deep Learning, AI, Medical Images, Defect Inspection, ECG
+Deep Learning, AI, Medical Images, Generative AI, Large Language Models, Defect Inspection, ECG
 
 ## Links
 
