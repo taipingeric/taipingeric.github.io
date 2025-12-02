@@ -18,7 +18,7 @@
 ## Experience
 
 * AI / Python Course lecturer
-    *   2018 -
+    *   2018 - Present
 
 * AI Engineer, Taiwan AI Academy
   * 2018/May - 2024/Jul
@@ -28,7 +28,7 @@
 
 ## Courses / Lectures / Talks
 * Python / Generative AI
-  * Yuan Ze University, Taipei University of Business
+  * Yuan Ze University, Taipei University of Business, Meteor Lighting Co., Ltd.
   * 2025/Jun, Aug
 
 * Edge AI: Introduction and Practical Applications
@@ -91,6 +91,10 @@
     *  Honorable Mention 
     *  AOI: Defect inspection
 
+## Publications
+
+* Google Scholar: [link](https://scholar.google.com/citations?user=9rX09cAAAAAJ&hl=zh-TW&oi=ao)
+
 ## Major
 
 Deep Learning, AI, Medical Images, Generative AI, Large Language Models, Defect Inspection, ECG
@@ -102,3 +106,5 @@ Deep Learning, AI, Medical Images, Generative AI, Large Language Models, Defect 
 ## Contact
 
 taipingeric@gmail.com
+
+f07945052@csie.ntu.edu.tw
