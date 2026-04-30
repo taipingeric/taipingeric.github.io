@@ -27,6 +27,8 @@
   * 2015/Oct - 2018/May
 
 ## Courses / Lectures / Talks
+* Exploring Generative AI, Capital Securities Corporation
+  * 2026/Apr
 * Python / Generative AI
   * Yuan Ze University, Taipei University of Business, Meteor Lighting Co., Ltd.
   * 2025/Jun, Aug
