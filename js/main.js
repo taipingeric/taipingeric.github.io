@@ -17,6 +17,20 @@
     applyTheme(root.getAttribute('data-theme') === 'light' ? 'dark' : 'light');
   });
 
+  // Talks expand/collapse
+  var talksList = document.getElementById('talks-list');
+  var talksToggle = document.getElementById('talks-toggle');
+  function updateTalksToggleLabel(lang) {
+    var expanded = !talksList.classList.contains('collapsed');
+    var moreAttr = lang === 'en' ? 'data-en-more' : 'data-zh-more';
+    var lessAttr = lang === 'en' ? 'data-en-less' : 'data-zh-less';
+    talksToggle.textContent = talksToggle.getAttribute(expanded ? lessAttr : moreAttr);
+  }
+  talksToggle.addEventListener('click', function () {
+    talksList.classList.toggle('collapsed');
+    updateTalksToggleLabel(localStorage.getItem(LANG_KEY) || 'zh');
+  });
+
   // Language
   var langBtn = document.getElementById('lang-toggle');
   var i18nEls = document.querySelectorAll('[data-zh][data-en]');
@@ -33,19 +47,5 @@
   applyLang(savedLang);
   langBtn.addEventListener('click', function () {
     applyLang((localStorage.getItem(LANG_KEY) || 'zh') === 'zh' ? 'en' : 'zh');
-  });
-
-  // Talks expand/collapse
-  var talksList = document.getElementById('talks-list');
-  var talksToggle = document.getElementById('talks-toggle');
-  function updateTalksToggleLabel(lang) {
-    var expanded = !talksList.classList.contains('collapsed');
-    var moreAttr = lang === 'en' ? 'data-en-more' : 'data-zh-more';
-    var lessAttr = lang === 'en' ? 'data-en-less' : 'data-zh-less';
-    talksToggle.textContent = talksToggle.getAttribute(expanded ? lessAttr : moreAttr);
-  }
-  talksToggle.addEventListener('click', function () {
-    talksList.classList.toggle('collapsed');
-    updateTalksToggleLabel(localStorage.getItem(LANG_KEY) || 'zh');
   });
 })();
