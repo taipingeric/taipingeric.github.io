@@ -246,17 +246,34 @@ a { color: inherit; text-decoration: none; }
 .meta { color: var(--text-dim); font-size: .82rem; }
 
 /* Timeline */
+.timeline-legend {
+  display: flex;
+  gap: 22px;
+  color: var(--text-dim);
+  font-size: .82rem;
+  margin: -8px 0 26px;
+}
+.timeline-legend span { display: inline-flex; align-items: center; gap: 7px; }
+.swatch {
+  display: inline-block;
+  width: 16px;
+  height: 3px;
+  border-radius: 2px;
+}
+.swatch-trunk { background: var(--accent); }
+.swatch-branch { background: var(--accent-2); }
+
 .timeline {
   list-style: none;
   margin: 0;
   padding: 0 0 0 22px;
-  border-left: 2px solid var(--border);
+  border-left: 2px solid var(--accent);
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 30px;
 }
 .timeline li { position: relative; }
-.timeline .dot {
+.timeline .tl-node {
   position: absolute;
   left: -28px;
   top: 4px;
@@ -265,8 +282,33 @@ a { color: inherit; text-decoration: none; }
   border-radius: 50%;
   background: var(--accent);
   box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 20%, transparent);
+  z-index: 2;
 }
 .tl-content strong { display: block; font-size: 1rem; }
+
+/* Branch items: roles that overlap another ongoing role in time */
+.timeline li.tl-branch {
+  padding-left: 46px;
+}
+.timeline li.tl-branch .tl-node {
+  left: 18px;
+  background: var(--accent-2);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-2) 20%, transparent);
+}
+.tl-curve {
+  position: absolute;
+  left: -28px;
+  top: -15px;
+  width: 46px;
+  height: calc(100% + 30px);
+  overflow: visible;
+}
+.tl-curve path {
+  fill: none;
+  stroke: var(--accent-2);
+  stroke-width: 2px;
+}
+.tl-branch.tl-open .tl-curve { height: calc(100% + 15px); top: -15px; }
 
 /* Talks */
 .talk-list {
