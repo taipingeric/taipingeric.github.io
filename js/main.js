@@ -1,51 +1,266 @@
 (function () {
-  var root = document.documentElement;
-  var THEME_KEY = 'theme';
-  var LANG_KEY = 'lang';
+  const SOCIALS = [
+    { label: "GitHub", url: "https://github.com/taipingeric" },
+    { label: "YouTube", url: "https://www.youtube.com/@fusionlab7360" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/chihyang-li-a883b375/" },
+    { label: "SlideShare", url: "https://www.slideshare.net/ChihyangLi" },
+    { label: "Google Scholar", url: "https://scholar.google.com/citations?user=9rX09cAAAAAJ&hl=zh-TW&oi=ao" },
+  ];
 
-  // Theme
-  var themeBtn = document.getElementById('theme-toggle');
-  function applyTheme(theme) {
-    root.setAttribute('data-theme', theme);
-    themeBtn.textContent = theme === 'light' ? '☀️' : '🌙';
-    localStorage.setItem(THEME_KEY, theme);
+  const CONTENT = {
+    en: {
+      nav: { about: "About", experience: "Experience", talks: "Talks", awards: "Awards", contact: "Contact" },
+      langButtonLabel: "中文",
+      hero: {
+        eyebrow: "PhD Candidate · AI Engineer · Educator",
+        name: "Chih-Yang (Eric) Li",
+        role: "AI Researcher & Educator specializing in deep learning, medical imaging, and generative AI.",
+        tagline: "Passions in AI. Stay hungry, stay foolish.",
+        ctaContact: "Get in touch",
+        ctaTalks: "See talks",
+      },
+      about: { eyebrow: "About", heading: "Background & expertise", expertiseLabel: "Areas of expertise", educationLabel: "Education" },
+      experience: { eyebrow: "Experience", heading: "Career timeline" },
+      talks: { eyebrow: "Talks", heading: "Courses & lectures", sub: "Selected teaching engagements across industry, academia, and public education." },
+      awards: { eyebrow: "Recognition", heading: "Competitions & awards" },
+      contact: { heading: "Let's work together", sub: "Open to consulting, teaching engagements, and research collaboration." },
+      footer: { copyright: "© 2026 Chih-Yang (Eric) Li", built: "Taipei, Taiwan" },
+      expertise: ["Deep Learning", "Artificial Intelligence", "Medical Imaging", "Generative AI", "Large Language Models", "Defect Inspection", "ECG Analysis"],
+      education: [
+        { degree: "PhD Candidate, Computer Science & Information Engineering", school: "National Taiwan University", years: "2020 – Present" },
+        { degree: "B.S., Mechanical Engineering", school: "National Taiwan University", years: "2006 – 2010" },
+      ],
+      experienceList: [
+        { title: "Technical Advisor", years: "2026 – Present" },
+        { title: "NVIDIA Certified Instructor", years: "2025 – Present" },
+        { title: "AI / Python Course Instructor", years: "2018 – Present" },
+        { title: "AI Engineer, Taiwan AI Academy", years: "2018.05 – 2024.07" },
+        { title: "iOS Engineer, U-Ioo Technology", years: "2015.10 – 2018.05" },
+      ],
+      talkCategories: [
+        {
+          id: "medical", title: "Medical Imaging & Healthcare AI",
+          items: [
+            { title: "AI in Medical Imaging", org: "Chunghwa Telecom Academy", date: "2024/Sep, 2025/Sep" },
+            { title: "AI in Healthcare: Present & Future", org: "Victory Education Foundation", date: "2023 – 2025/Apr" },
+            { title: "Applications of AI in Medical Imaging", org: "Tzu Chi University, Dept. of Information Management", date: "2022/Oct" },
+            { title: "Clinical Medical Image Analysis: PyTorch Bootcamp", org: "MorningStar Technology", date: "2021/Oct" },
+          ],
+        },
+        {
+          id: "genai", title: "Generative AI & LLM",
+          items: [
+            { title: "Exploring Generative AI", org: "Capital Securities", date: "2026/Apr" },
+            { title: "Python / Generative AI", org: "Yuan Ze University Continuing Ed., Taipei College of Business, Dong Yu Enterprise", date: "2025/Jun, Aug" },
+            { title: "AI / GenAI Introduction", org: "Tong Hsing Electronics", date: "2024/Sep" },
+            { title: "Python × ChatGPT Workflows", org: "NTU CSIE Training Program", date: "2024/Jul –" },
+          ],
+        },
+        {
+          id: "foundations", title: "AI Foundations & Youth Education",
+          items: [
+            { title: "Edge AI: Introduction & Applications", org: "International Cooperation and Development Fund", date: "2025/Sep" },
+            { title: "AI Hands-on Camp", org: "NTU CSIE Training Program", date: "2024/Jul –" },
+            { title: "AI Introduction & Practice", org: "Dream House Foundation", date: "2024/Apr, Oct" },
+            { title: "Foundations of Python", org: "Independent Workshop", date: "2023/Nov" },
+            { title: "3AI Discovery Summer Camp", org: "1221 Youth Association, Penghu Marine Foundation", date: "2023/Jul, Aug" },
+            { title: "What High Schoolers Should Know About AI", org: "Victory Education Foundation", date: "2023 – 2025/Apr" },
+            { title: "Introduction to AI", org: "Chang Gung University, Dept. of Chemical & Materials Eng.", date: "2021 – 2025/Oct" },
+            { title: "AI in Industry Applications", org: "Tamkang University, Dept. of Chemical & Materials Eng.", date: "2022/May" },
+          ],
+        },
+        {
+          id: "industrial", title: "Industrial AI & Defect Inspection",
+          items: [
+            { title: "AOI & AI in Industrial Applications", org: "Chunghwa Telecom", date: "2023/Feb, Jun, 2024/Apr" },
+            { title: "AI, Machine Learning & Deep Learning", org: "Taiwan AI Academy", date: "2018 –" },
+            { title: "AI Courses (Medical Imaging / Defect Inspection / PyTorch, TensorFlow, Keras, Python)", org: "Tibame", date: "2018 –" },
+          ],
+        },
+      ],
+      awardList: [
+        { title: "Outstanding Teaching Assistant", detail: "Deep Learning in Medical Imaging (112-2) & Medical Image Processing (112-1)", meta: "NTU CSIE", link: "", linkLabel: "" },
+        { title: "MICCAI 2022 SAR-RARP50 Challenge", detail: "Multi-task: 2nd place · Segmentation: 4th place · Team AIA_Noobs", meta: "Sep 2022", link: "https://arxiv.org/abs/2401.00496", linkLabel: "Read the paper" },
+        { title: "2018 National Palace Museum Hackathon", detail: "1st Place — Image Style Transfer", meta: "2018", link: "", linkLabel: "" },
+        { title: "2018 AIA First Technical Cohort Capstone", detail: "Honorable Mention — Metal Surface Defect Detection", meta: "2018", link: "", linkLabel: "" },
+      ],
+    },
+    zh: {
+      nav: { about: "關於", experience: "經歷", talks: "課程 / 演講", awards: "競賽 / 得獎", contact: "聯絡" },
+      langButtonLabel: "EN",
+      hero: {
+        eyebrow: "台大資工博士生 · AI 工程師 / 講師",
+        name: "李智揚 Chih-Yang (Eric) Li",
+        role: "專精深度學習、醫學影像、生成式AI 的研究者與講師。",
+        tagline: "Passions in AI. Stay hungry, stay foolish.",
+        ctaContact: "聯絡我",
+        ctaTalks: "查看演講",
+      },
+      about: { eyebrow: "關於", heading: "背景與專長", expertiseLabel: "專長領域", educationLabel: "學歷" },
+      experience: { eyebrow: "經歷", heading: "職涯時間軸" },
+      talks: { eyebrow: "課程 / 演講", heading: "課程與演講", sub: "橫跨產業、學術與公眾教育的講學經歷精選。" },
+      awards: { eyebrow: "肯定", heading: "競賽 / 得獎" },
+      contact: { heading: "一起合作", sub: "歡迎技術顧問、課程演講與研究合作邀約。" },
+      footer: { copyright: "© 2026 李智揚 Chih-Yang (Eric) Li", built: "台北, 台灣" },
+      expertise: ["深度學習", "人工智慧", "醫學影像", "生成式AI", "大型語言模型", "瑕疵檢測", "心電圖分析"],
+      education: [
+        { degree: "博士班, 資訊工程學系", school: "國立台灣大學", years: "2020 – 現在" },
+        { degree: "學士, 機械工程學系", school: "國立台灣大學", years: "2006 – 2010" },
+      ],
+      experienceList: [
+        { title: "技術顧問", years: "2026 – 現在" },
+        { title: "NVIDIA 認證講師", years: "2025 – 現在" },
+        { title: "AI / Python 課程講師", years: "2018 – 現在" },
+        { title: "AI 工程師, 台灣人工智慧學校", years: "2018/05 – 2024/07" },
+        { title: "iOS 工程師, 有無科技", years: "2015/10 – 2018/05" },
+      ],
+      talkCategories: [
+        {
+          id: "medical", title: "醫學影像與健康 AI",
+          items: [
+            { title: "AI 醫學影像", org: "中華電信學院", date: "2024/Sep, 2025/Sep" },
+            { title: "AI 於醫療發展與應用", org: "得勝者文教基金會", date: "2023 – 2025/Apr" },
+            { title: "人工智慧於醫學影像之發展應用", org: "慈濟大學資訊管理學系", date: "2022/Oct" },
+            { title: "AI 臨床醫學影像分析: PyTorch 實戰班", org: "晨慧科技", date: "2021/Oct" },
+          ],
+        },
+        {
+          id: "genai", title: "生成式AI 與大型語言模型",
+          items: [
+            { title: "探索生成式AI", org: "群益證券", date: "2026/Apr" },
+            { title: "Python / 生成式AI", org: "元智大學終身教育部、台北商業大學、東育實業", date: "2025/Jun, Aug" },
+            { title: "AI / GenAI 簡介", org: "同欣電子", date: "2024/Sep" },
+            { title: "Python x ChatGPT 工作流", org: "臺灣大學資訊系統訓練班", date: "2024/Jul ~" },
+          ],
+        },
+        {
+          id: "foundations", title: "AI 基礎與青少年教育",
+          items: [
+            { title: "Edge AI 簡介與實務應用", org: "財團法人國際合作發展基金會", date: "2025/Sep" },
+            { title: "AI 實作營", org: "臺灣大學資訊系統訓練班", date: "2024/Jul ~" },
+            { title: "AI 簡介與實作", org: "夢想之家基金會", date: "2024/Apr, Oct" },
+            { title: "基礎 Python", org: "獨立工作坊", date: "2023/Nov" },
+            { title: "3AI 探索實作夏令營", org: "1221青社會, 澎湖海洋基金會", date: "2023/Jul, Aug" },
+            { title: "高中生該知道的 AI 現在與未來", org: "得勝者文教基金會", date: "2023 – 2025/Apr" },
+            { title: "AI 概論", org: "長庚大學化材系", date: "2021 – 2025/Oct" },
+            { title: "AI 於產業應用", org: "淡江大學化材系", date: "2022/May" },
+          ],
+        },
+        {
+          id: "industrial", title: "工業 AI 與瑕疵檢測",
+          items: [
+            { title: "自動光學檢測 AOI 及 AI 之工業應用實務", org: "中華電信", date: "2023/Feb, Jun, 2024/Apr" },
+            { title: "AI, 機器學習與深度學習", org: "台灣人工智慧學校", date: "2018 –" },
+            { title: "AI 課程 (醫學影像分析 / 瑕疵檢測 / PyTorch, TensorFlow, Keras, Python)", org: "Tibame 緯育", date: "2018 –" },
+          ],
+        },
+      ],
+      awardList: [
+        { title: "優良助教", detail: "深度學習於醫學影像 (112-2) 、 醫學影像處理 (112-1)", meta: "台大資訊學群", link: "", linkLabel: "" },
+        { title: "MICCAI 2022 SAR-RARP50 競賽", detail: "多任務: 2nd ・ 影像切割: 4th ・ 隊名: AIA_Noobs", meta: "2022/09", link: "https://arxiv.org/abs/2401.00496", linkLabel: "閱讀論文" },
+        { title: "2018 故宮黑客松", detail: "第 1 名 — 影像風格轉換", meta: "2018", link: "", linkLabel: "" },
+        { title: "2018 AIA 第一屆技術班 專題競賽", detail: "佳作 — 金屬表面瑕疵檢測", meta: "2018", link: "", linkLabel: "" },
+      ],
+    },
+  };
+
+  const LANG_KEY = "lang";
+  const state = {
+    lang: localStorage.getItem(LANG_KEY) || "zh",
+    expanded: { medical: false, genai: false, foundations: false, industrial: false },
+  };
+
+  const $ = (id) => document.getElementById(id);
+  const escapeHtml = (s) => s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+  function renderSocials(container, list) {
+    container.innerHTML = list.map((s) =>
+      `<a href="${s.url}" target="_blank" rel="noopener">${escapeHtml(s.label)}</a>`
+    ).join("");
   }
-  var savedTheme = localStorage.getItem(THEME_KEY) ||
-    (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-  applyTheme(savedTheme);
-  themeBtn.addEventListener('click', function () {
-    applyTheme(root.getAttribute('data-theme') === 'light' ? 'dark' : 'light');
-  });
 
-  // Talks expand/collapse
-  var talksList = document.getElementById('talks-list');
-  var talksToggle = document.getElementById('talks-toggle');
-  function updateTalksToggleLabel(lang) {
-    var expanded = !talksList.classList.contains('collapsed');
-    var moreAttr = lang === 'en' ? 'data-en-more' : 'data-zh-more';
-    var lessAttr = lang === 'en' ? 'data-en-less' : 'data-zh-less';
-    talksToggle.textContent = talksToggle.getAttribute(expanded ? lessAttr : moreAttr);
-  }
-  talksToggle.addEventListener('click', function () {
-    talksList.classList.toggle('collapsed');
-    updateTalksToggleLabel(localStorage.getItem(LANG_KEY) || 'zh');
-  });
+  function render() {
+    const c = CONTENT[state.lang];
+    document.documentElement.lang = state.lang === "en" ? "en" : "zh-Hant";
 
-  // Language
-  var langBtn = document.getElementById('lang-toggle');
-  var i18nEls = document.querySelectorAll('[data-zh][data-en]');
-  function applyLang(lang) {
-    document.documentElement.lang = lang === 'en' ? 'en' : 'zh-Hant';
-    i18nEls.forEach(function (el) {
-      el.textContent = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-zh');
+    $("lang-toggle").textContent = c.langButtonLabel;
+
+    $("nav-links").innerHTML = [
+      ["#about", c.nav.about], ["#experience", c.nav.experience], ["#talks", c.nav.talks],
+      ["#awards", c.nav.awards], ["#contact", c.nav.contact],
+    ].map(([href, label]) => `<a href="${href}">${escapeHtml(label)}</a>`).join("");
+
+    $("hero-eyebrow").textContent = c.hero.eyebrow;
+    $("hero-name").textContent = c.hero.name;
+    $("hero-role").textContent = c.hero.role;
+    $("hero-tagline").textContent = c.hero.tagline;
+    $("hero-cta-contact").textContent = c.hero.ctaContact;
+    $("hero-cta-talks").textContent = c.hero.ctaTalks;
+    renderSocials($("hero-socials"), SOCIALS);
+
+    $("about-eyebrow").textContent = c.about.eyebrow;
+    $("about-heading").textContent = c.about.heading;
+    $("about-expertise-label").textContent = c.about.expertiseLabel;
+    $("about-education-label").textContent = c.about.educationLabel;
+    $("about-expertise").innerHTML = c.expertise.map((t) => `<span>${escapeHtml(t)}</span>`).join("");
+    $("about-education").innerHTML = c.education.map((ed) =>
+      `<div><div class="edu-degree">${escapeHtml(ed.degree)}</div><div class="edu-school">${escapeHtml(ed.school)}</div><div class="edu-years">${escapeHtml(ed.years)}</div></div>`
+    ).join("");
+
+    $("experience-eyebrow").textContent = c.experience.eyebrow;
+    $("experience-heading").textContent = c.experience.heading;
+    $("experience-list").innerHTML = c.experienceList.map((job) =>
+      `<li><span class="tl-dot"></span><div class="tl-row"><h4>${escapeHtml(job.title)}</h4><span class="tl-years">${escapeHtml(job.years)}</span></div></li>`
+    ).join("");
+
+    $("talks-eyebrow").textContent = c.talks.eyebrow;
+    $("talks-heading").textContent = c.talks.heading;
+    $("talks-sub").textContent = c.talks.sub;
+    const showMoreLabel = state.lang === "en" ? "Show more" : "顯示更多";
+    const showLessLabel = state.lang === "en" ? "Show less" : "收合";
+    $("talks-categories").innerHTML = c.talkCategories.map((cat) => {
+      const expanded = !!state.expanded[cat.id];
+      const visibleItems = expanded ? cat.items : cat.items.slice(0, 2);
+      const itemsHtml = visibleItems.map((item) =>
+        `<div class="talk-item"><div class="talk-item-title">${escapeHtml(item.title)}</div><div class="talk-item-org">${escapeHtml(item.org)}</div><div class="talk-item-date">${escapeHtml(item.date)}</div></div>`
+      ).join("");
+      const toggleHtml = cat.items.length > 2
+        ? `<button class="talk-toggle" data-cat="${cat.id}">${expanded ? showLessLabel : showMoreLabel}</button>`
+        : "";
+      return `<div class="card talk-cat"><h3>${escapeHtml(cat.title)}</h3><div class="talk-items">${itemsHtml}</div>${toggleHtml}</div>`;
+    }).join("");
+    $("talks-categories").querySelectorAll(".talk-toggle").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const id = btn.dataset.cat;
+        state.expanded[id] = !state.expanded[id];
+        render();
+      });
     });
-    langBtn.textContent = lang === 'en' ? '中文' : 'EN';
-    updateTalksToggleLabel(lang);
-    localStorage.setItem(LANG_KEY, lang);
+
+    $("awards-eyebrow").textContent = c.awards.eyebrow;
+    $("awards-heading").textContent = c.awards.heading;
+    $("awards-list").innerHTML = c.awardList.map((a) =>
+      `<div class="card award-card">
+        <div class="award-title">${escapeHtml(a.title)}</div>
+        <div class="award-detail">${escapeHtml(a.detail)}</div>
+        <div class="award-meta">${escapeHtml(a.meta)}</div>
+        ${a.link ? `<a class="award-link" href="${a.link}" target="_blank" rel="noopener">${escapeHtml(a.linkLabel)} →</a>` : ""}
+      </div>`
+    ).join("");
+
+    $("contact-heading").textContent = c.contact.heading;
+    $("contact-sub").textContent = c.contact.sub;
+    renderSocials($("contact-socials"), SOCIALS);
+
+    $("footer-copyright").textContent = c.footer.copyright;
+    $("footer-built").textContent = c.footer.built;
   }
-  var savedLang = localStorage.getItem(LANG_KEY) || 'zh';
-  applyLang(savedLang);
-  langBtn.addEventListener('click', function () {
-    applyLang((localStorage.getItem(LANG_KEY) || 'zh') === 'zh' ? 'en' : 'zh');
+
+  $("lang-toggle").addEventListener("click", () => {
+    state.lang = state.lang === "zh" ? "en" : "zh";
+    localStorage.setItem(LANG_KEY, state.lang);
+    render();
   });
+
+  render();
 })();
