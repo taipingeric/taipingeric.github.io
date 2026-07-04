@@ -198,8 +198,6 @@
     $("hero-cta-talks").textContent = c.hero.ctaTalks;
     renderSocials($("hero-socials"), SOCIALS);
 
-    $("about-eyebrow").textContent = c.about.eyebrow;
-    $("about-heading").textContent = c.about.heading;
     $("about-expertise-label").textContent = c.about.expertiseLabel;
     $("about-education-label").textContent = c.about.educationLabel;
     $("about-expertise").innerHTML = c.expertise.map((t) => `<span>${escapeHtml(t)}</span>`).join("");
@@ -212,9 +210,6 @@
       `<li><span class="tl-dot"></span><div class="tl-row"><h4>${escapeHtml(job.title)}</h4><span class="tl-years">${escapeHtml(job.years)}</span></div></li>`
     ).join("");
 
-    $("talks-eyebrow").textContent = c.talks.eyebrow;
-    $("talks-heading").textContent = c.talks.heading;
-    $("talks-sub").textContent = c.talks.sub;
     const showMoreLabel = state.lang === "en" ? "Show more" : "顯示更多";
     const showLessLabel = state.lang === "en" ? "Show less" : "收合";
     $("talks-categories").innerHTML = c.talkCategories.map((cat) => {
@@ -236,7 +231,6 @@
       });
     });
 
-    $("awards-eyebrow").textContent = c.awards.eyebrow;
     $("awards-heading").textContent = c.awards.heading;
     $("awards-list").innerHTML = c.awardList.map((a) =>
       `<div class="card award-card">
