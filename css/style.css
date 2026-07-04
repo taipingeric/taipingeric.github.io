@@ -126,6 +126,12 @@ img { max-width: 100%; display: block; }
   font: 500 13px/1.5 var(--font-body);
 }
 .nav-links a:hover { color: var(--text-primary); }
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
 .lang-btn {
   height: 34px;
   padding: 0 var(--space-5);
@@ -137,6 +143,7 @@ img { max-width: 100%; display: block; }
   cursor: pointer;
   flex-shrink: 0;
 }
+.theme-btn { width: 34px; padding: 0; font-size: 15px; }
 
 /* Shared */
 .section { padding: var(--space-12) 0; }
@@ -265,17 +272,20 @@ img { max-width: 100%; display: block; }
 
 /* Experience timeline */
 .timeline {
+  --tl-gutter: calc(var(--space-9) + var(--space-8)); /* li origin, from ol's left edge */
+  --tl-axis: 46px;   /* dot/line center, from ol's left edge */
+  --tl-dot-d: 16px;
   list-style: none;
   max-width: 760px;
   margin: 0 auto !important;
   position: relative;
-  padding-left: calc(var(--space-9) + var(--space-8)) !important;
+  padding-left: var(--tl-gutter) !important;
   padding-top: 0; padding-bottom: 0;
 }
 .timeline::before {
   content: "";
   position: absolute;
-  left: calc(var(--space-8) + 7px);
+  left: calc(var(--tl-axis) - 1px); /* line is 2px wide, so half = 1px */
   top: 6px; bottom: 6px;
   width: 2px;
   background: var(--border-default);
@@ -284,9 +294,9 @@ img { max-width: 100%; display: block; }
 .timeline li:last-child { padding-bottom: 0; }
 .tl-dot {
   position: absolute;
-  left: calc(0px - var(--space-9) + 6px);
+  left: calc(var(--tl-axis) - (var(--tl-dot-d) / 2) - var(--tl-gutter));
   top: 4px;
-  width: 16px; height: 16px;
+  width: var(--tl-dot-d); height: var(--tl-dot-d);
   border-radius: 50%;
   background: var(--surface-brand);
   border: 3px solid var(--surface-sunken);

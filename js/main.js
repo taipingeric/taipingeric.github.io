@@ -208,7 +208,6 @@
     ).join("");
 
     $("experience-eyebrow").textContent = c.experience.eyebrow;
-    $("experience-heading").textContent = c.experience.heading;
     $("experience-list").innerHTML = c.experienceList.map((job) =>
       `<li><span class="tl-dot"></span><div class="tl-row"><h4>${escapeHtml(job.title)}</h4><span class="tl-years">${escapeHtml(job.years)}</span></div></li>`
     ).join("");
@@ -260,6 +259,30 @@
     state.lang = state.lang === "zh" ? "en" : "zh";
     localStorage.setItem(LANG_KEY, state.lang);
     render();
+  });
+
+  // Theme: default to OS preference, remember explicit user choice
+  const THEME_KEY = "theme";
+  const themeBtn = $("theme-toggle");
+  function applyTheme(theme) {
+    if (theme === "dark") {
+      document.documentElement.setAttribute("data-theme", "dark");
+      themeBtn.textContent = "☀️";
+    } else {
+      document.documentElement.removeAttribute("data-theme");
+      themeBtn.textContent = "🌙";
+    }
+  }
+  const darkMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  const savedTheme = localStorage.getItem(THEME_KEY);
+  applyTheme(savedTheme || (darkMediaQuery.matches ? "dark" : "light"));
+  darkMediaQuery.addEventListener("change", (e) => {
+    if (!localStorage.getItem(THEME_KEY)) applyTheme(e.matches ? "dark" : "light");
+  });
+  themeBtn.addEventListener("click", () => {
+    const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    localStorage.setItem(THEME_KEY, next);
+    applyTheme(next);
   });
 
   render();
