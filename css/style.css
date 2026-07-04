@@ -264,51 +264,67 @@ a { color: inherit; text-decoration: none; }
 .swatch-branch { background: var(--accent-2); }
 
 .timeline {
+  --tl-gutter: 40px;   /* li content offset from ol's left edge */
+  --tl-line-w: 6px;    /* trunk pipe thickness */
+  --tl-node-d: 20px;   /* node ring diameter */
+  --tl-node-border: 6px;
+  --tl-branch-dx: 48px; /* branch node center distance from trunk center */
   list-style: none;
   margin: 0;
-  padding: 0 0 0 22px;
-  border-left: 2px solid var(--accent);
+  padding: 0 0 0 var(--tl-gutter);
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 34px;
+  position: relative;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: var(--tl-line-w);
+  border-radius: calc(var(--tl-line-w) / 2);
+  background: var(--accent);
 }
 .timeline li { position: relative; }
 .timeline .tl-node {
   position: absolute;
-  left: -28px;
-  top: 4px;
-  width: 12px;
-  height: 12px;
+  left: calc((var(--tl-line-w) / 2) - (var(--tl-node-d) / 2) - var(--tl-gutter));
+  top: 1px;
+  width: var(--tl-node-d);
+  height: var(--tl-node-d);
   border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 20%, transparent);
+  background: var(--bg);
+  border: var(--tl-node-border) solid var(--accent);
   z-index: 2;
 }
+.section.alt .timeline .tl-node { background: var(--bg-alt); }
 .tl-content strong { display: block; font-size: 1rem; }
 
 /* Branch items: roles that overlap another ongoing role in time */
 .timeline li.tl-branch {
-  padding-left: 46px;
+  padding-left: 52px;
 }
 .timeline li.tl-branch .tl-node {
-  left: 18px;
-  background: var(--accent-2);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-2) 20%, transparent);
+  left: calc(var(--tl-branch-dx) - (var(--tl-node-d) / 2) - var(--tl-gutter));
+  border-color: var(--accent-2);
 }
 .tl-curve {
   position: absolute;
-  left: -28px;
-  top: -15px;
-  width: 46px;
-  height: calc(100% + 30px);
+  left: calc(0px - var(--tl-gutter));
+  top: -17px;
+  width: calc(var(--tl-branch-dx) + (var(--tl-node-d) / 2));
+  height: calc(100% + 34px);
   overflow: visible;
 }
 .tl-curve path {
   fill: none;
   stroke: var(--accent-2);
-  stroke-width: 2px;
+  stroke-width: 6px;
+  stroke-linecap: round;
 }
-.tl-branch.tl-open .tl-curve { height: calc(100% + 15px); top: -15px; }
+.tl-branch.tl-open .tl-curve { height: calc(100% + 17px); top: -17px; }
 
 /* Talks */
 .talk-list {
