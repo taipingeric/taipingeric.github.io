@@ -104,7 +104,7 @@
       footer: { copyright: "© 2026 李智揚 Chih-Yang (Eric) Li", built: "台北, 台灣" },
       expertise: ["深度學習", "人工智慧", "醫學影像", "生成式AI", "大型語言模型", "瑕疵檢測", "心電圖分析"],
       education: [
-        { degree: "博士班, 資訊工程學系", school: "國立台灣大學", years: "2020 – 現在" },
+        { degree: "台大資工所博士候選人", school: "國立台灣大學", years: "2020 – 現在" },
         { degree: "學士, 機械工程學系", school: "國立台灣大學", years: "2006 – 2010" },
       ],
       experienceList: [
