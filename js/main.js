@@ -10,25 +10,25 @@
   // Drop a matching image into assets/partners/<slug>.svg (or .png) to
   // replace the fallback initials badge below - no code changes needed.
   const PARTNERS = [
-    { slug: "nvidia", name: "NVIDIA", initials: "NV" },
-    { slug: "ntu", name: "National Taiwan University", initials: "NTU" },
-    { slug: "taiwan-ai-academy", name: "Taiwan AI Academy", initials: "AIA" },
-    { slug: "chunghwa-telecom", name: "Chunghwa Telecom", initials: "CHT" },
-    { slug: "yzu", name: "Yuan Ze University", initials: "YZU" },
-    { slug: "tpcb", name: "Taipei College of Business", initials: "TCB" },
-    { slug: "cgu", name: "Chang Gung University", initials: "CGU" },
-    { slug: "tku", name: "Tamkang University", initials: "TKU" },
-    { slug: "tzu-chi", name: "Tzu Chi University", initials: "TCU" },
-    { slug: "victory-education", name: "Victory Education Foundation", initials: "VEF" },
-    { slug: "morningstar", name: "MorningStar Technology", initials: "MST" },
-    { slug: "capital-securities", name: "Capital Securities", initials: "CSC" },
-    { slug: "dongyu", name: "Dong Yu Enterprise", initials: "DYE" },
-    { slug: "tong-hsing", name: "Tong Hsing Electronics", initials: "THE" },
-    { slug: "icdf", name: "Intl. Cooperation & Development Fund", initials: "ICDF" },
-    { slug: "dream-house", name: "Dream House Foundation", initials: "DHF" },
-    { slug: "youth-1221", name: "1221 Youth Association", initials: "1221" },
-    { slug: "penghu-marine", name: "Penghu Marine Foundation", initials: "PMF" },
-    { slug: "tibame", name: "Tibame", initials: "TIB" },
+    { slug: "nvidia", en: "NVIDIA", zh: "NVIDIA", initials: "NV" },
+    { slug: "ntu", en: "National Taiwan University", zh: "國立台灣大學", initials: "NTU" },
+    { slug: "taiwan-ai-academy", en: "Taiwan AI Academy", zh: "台灣人工智慧學校", initials: "AIA" },
+    { slug: "chunghwa-telecom", en: "Chunghwa Telecom", zh: "中華電信", initials: "CHT" },
+    { slug: "yzu", en: "Yuan Ze University", zh: "元智大學", initials: "YZU" },
+    { slug: "tpcb", en: "Taipei College of Business", zh: "台北商業大學", initials: "TCB" },
+    { slug: "cgu", en: "Chang Gung University", zh: "長庚大學", initials: "CGU" },
+    { slug: "tku", en: "Tamkang University", zh: "淡江大學", initials: "TKU" },
+    { slug: "tzu-chi", en: "Tzu Chi University", zh: "慈濟大學", initials: "TCU" },
+    { slug: "victory-education", en: "Victory Education Foundation", zh: "得勝者文教基金會", initials: "VEF" },
+    { slug: "morningstar", en: "MorningStar Technology", zh: "晨慧科技", initials: "MST" },
+    { slug: "capital-securities", en: "Capital Securities", zh: "群益證券", initials: "CSC" },
+    { slug: "dongyu", en: "Dong Yu Enterprise", zh: "東育實業", initials: "DYE" },
+    { slug: "tong-hsing", en: "Tong Hsing Electronics", zh: "同欣電子", initials: "THE" },
+    { slug: "icdf", en: "Intl. Cooperation & Development Fund", zh: "財團法人國際合作發展基金會", initials: "ICDF" },
+    { slug: "dream-house", en: "Dream House Foundation", zh: "夢想之家基金會", initials: "DHF" },
+    { slug: "youth-1221", en: "1221 Youth Association", zh: "1221青社會", initials: "1221" },
+    { slug: "penghu-marine", en: "Penghu Marine Foundation", zh: "澎湖海洋基金會", initials: "PMF" },
+    { slug: "tibame", en: "Tibame", zh: "緯育", initials: "TIB" },
   ];
 
   const CONTENT = {
@@ -203,14 +203,15 @@
     ).join("");
   }
 
-  function renderPartners() {
+  function renderPartners(lang) {
     const container = $("partners-grid");
-    container.innerHTML = PARTNERS.map((p) =>
-      `<div class="partner-tile" title="${escapeHtml(p.name)}">
-        <img src="assets/partners/${p.slug}.svg" alt="${escapeHtml(p.name)}" data-slug="${p.slug}" data-initials="${escapeHtml(p.initials)}">
-        <span class="partner-name">${escapeHtml(p.name)}</span>
-      </div>`
-    ).join("");
+    container.innerHTML = PARTNERS.map((p) => {
+      const name = lang === "en" ? p.en : p.zh;
+      return `<div class="partner-tile" title="${escapeHtml(name)}">
+        <img src="assets/partners/${p.slug}.svg" alt="${escapeHtml(name)}" data-slug="${p.slug}" data-initials="${escapeHtml(p.initials)}">
+        <span class="partner-name">${escapeHtml(name)}</span>
+      </div>`;
+    }).join("");
     container.querySelectorAll("img").forEach((img) => {
       let stage = 0;
       img.addEventListener("error", function onError() {
@@ -288,6 +289,7 @@
         ${a.link ? `<a class="award-link" href="${a.link}" target="_blank" rel="noopener">${escapeHtml(a.linkLabel)} →</a>` : ""}
       </div>`
     ).join("");
+    renderPartners(state.lang);
 
     $("contact-heading").textContent = c.contact.heading;
     $("contact-sub").textContent = c.contact.sub;
@@ -328,5 +330,4 @@
   });
 
   render();
-  renderPartners();
 })();
