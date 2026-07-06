@@ -20,7 +20,6 @@
     { slug: "tku", en: "Tamkang University", zh: "淡江大學", initials: "TKU" },
     { slug: "tzu-chi", en: "Tzu Chi University", zh: "慈濟大學", initials: "TCU" },
     { slug: "victory-education", en: "Victory Education Foundation", zh: "得勝者文教基金會", initials: "VEF" },
-    { slug: "morningstar", en: "MorningStar Technology", zh: "晨慧科技", initials: "MST" },
     { slug: "capital-securities", en: "Capital Securities", zh: "群益證券", initials: "CSC" },
     { slug: "dongyu", en: "Dong Yu Enterprise", zh: "東育實業", initials: "DYE" },
     { slug: "tong-hsing", en: "Tong Hsing Electronics", zh: "同欣電子", initials: "THE" },
