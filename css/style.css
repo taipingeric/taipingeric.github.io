@@ -329,6 +329,46 @@ img { max-width: 100%; display: block; }
 .award-meta { font: 400 12px/1.4 var(--font-body); color: var(--text-tertiary); }
 .award-link { font: 500 13px/1.5 var(--font-body); color: var(--text-brand); text-decoration: none; margin-top: var(--space-2); }
 
+/* Partner logos */
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+}
+.partner-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-5) var(--space-3);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  background: var(--surface-card);
+}
+.partner-tile img {
+  max-width: 100%;
+  max-height: 32px;
+  object-fit: contain;
+  filter: grayscale(1) opacity(0.7);
+  transition: filter .2s ease;
+}
+.partner-tile:hover img { filter: none; }
+.partner-badge {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--surface-brand-soft);
+  color: var(--text-brand);
+  display: flex; align-items: center; justify-content: center;
+  font: 600 12px/1 var(--font-display);
+}
+.partner-name {
+  font: 400 11px/1.3 var(--font-body);
+  color: var(--text-tertiary);
+  text-align: center;
+}
+
 /* Contact */
 .contact-banner {
   border-radius: var(--radius-xl);

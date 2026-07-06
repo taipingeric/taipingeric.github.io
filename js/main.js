@@ -7,6 +7,30 @@
     { label: "Google Scholar", url: "https://scholar.google.com/citations?user=9rX09cAAAAAJ&hl=zh-TW&oi=ao" },
   ];
 
+  // Drop a matching image into assets/partners/<slug>.svg (or .png) to
+  // replace the fallback initials badge below - no code changes needed.
+  const PARTNERS = [
+    { slug: "nvidia", name: "NVIDIA", initials: "NV" },
+    { slug: "ntu", name: "National Taiwan University", initials: "NTU" },
+    { slug: "taiwan-ai-academy", name: "Taiwan AI Academy", initials: "AIA" },
+    { slug: "chunghwa-telecom", name: "Chunghwa Telecom", initials: "CHT" },
+    { slug: "yzu", name: "Yuan Ze University", initials: "YZU" },
+    { slug: "tpcb", name: "Taipei College of Business", initials: "TCB" },
+    { slug: "cgu", name: "Chang Gung University", initials: "CGU" },
+    { slug: "tku", name: "Tamkang University", initials: "TKU" },
+    { slug: "tzu-chi", name: "Tzu Chi University", initials: "TCU" },
+    { slug: "victory-education", name: "Victory Education Foundation", initials: "VEF" },
+    { slug: "morningstar", name: "MorningStar Technology", initials: "MST" },
+    { slug: "capital-securities", name: "Capital Securities", initials: "CSC" },
+    { slug: "dongyu", name: "Dong Yu Enterprise", initials: "DYE" },
+    { slug: "tong-hsing", name: "Tong Hsing Electronics", initials: "THE" },
+    { slug: "icdf", name: "Intl. Cooperation & Development Fund", initials: "ICDF" },
+    { slug: "dream-house", name: "Dream House Foundation", initials: "DHF" },
+    { slug: "youth-1221", name: "1221 Youth Association", initials: "1221" },
+    { slug: "penghu-marine", name: "Penghu Marine Foundation", initials: "PMF" },
+    { slug: "tibame", name: "Tibame", initials: "TIB" },
+  ];
+
   const CONTENT = {
     en: {
       nav: { about: "About", experience: "Experience", talks: "Talks", awards: "Awards", contact: "Contact" },
@@ -179,6 +203,30 @@
     ).join("");
   }
 
+  function renderPartners() {
+    const container = $("partners-grid");
+    container.innerHTML = PARTNERS.map((p) =>
+      `<div class="partner-tile" title="${escapeHtml(p.name)}">
+        <img src="assets/partners/${p.slug}.svg" alt="${escapeHtml(p.name)}" data-slug="${p.slug}" data-initials="${escapeHtml(p.initials)}">
+        <span class="partner-name">${escapeHtml(p.name)}</span>
+      </div>`
+    ).join("");
+    container.querySelectorAll("img").forEach((img) => {
+      let stage = 0;
+      img.addEventListener("error", function onError() {
+        stage++;
+        if (stage === 1) {
+          img.src = `assets/partners/${img.dataset.slug}.png`;
+        } else {
+          const badge = document.createElement("span");
+          badge.className = "partner-badge";
+          badge.textContent = img.dataset.initials;
+          img.replaceWith(badge);
+        }
+      });
+    });
+  }
+
   function render() {
     const c = CONTENT[state.lang];
     document.documentElement.lang = state.lang === "en" ? "en" : "zh-Hant";
@@ -280,4 +328,5 @@
   });
 
   render();
+  renderPartners();
 })();
