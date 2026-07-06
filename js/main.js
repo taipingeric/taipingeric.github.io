@@ -7,6 +7,14 @@
     { label: "Google Scholar", url: "https://scholar.google.com/citations?user=9rX09cAAAAAJ&hl=zh-TW&oi=ao" },
   ];
 
+  const SOCIAL_ICONS = {
+    GitHub: '<svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>',
+    YouTube: '<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M23.5 6.2s-.23-1.64-.94-2.36c-.9-.94-1.9-.95-2.36-1C16.9 2.5 12 2.5 12 2.5h-.01s-4.9 0-8.2.34c-.46.05-1.46.06-2.36 1C.63 4.56.4 6.2.4 6.2S.16 8.13.16 10.05v1.8c0 1.93.24 3.86.24 3.86s.23 1.64.94 2.36c.9.95 2.08.92 2.6 1.02 1.9.18 8.06.34 8.06.34s4.9-.01 8.2-.35c.46-.05 1.46-.06 2.36-1 .71-.72.94-2.36.94-2.36s.24-1.93.24-3.86v-1.8c0-1.92-.24-3.85-.24-3.85ZM9.6 14.5V7.4l6.4 3.56L9.6 14.5Z"/></svg>',
+    LinkedIn: '<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>',
+    SlideShare: '<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M6.4 8.2a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm11.2 0a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2ZM3 4h18a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm0 2v12h18V6H3Z"/></svg>',
+    "Google Scholar": '<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 3 1 9l4 2.18v6L12 21l7-3.82v-6L21 9 12 3Zm0 2.31L17.82 9 12 12.31 6.18 9 12 5.31ZM7 12.36l4.25 2.32a1 1 0 0 0 .95 0L16 12.99v4.19L12 19.4l-5-2.72v-4.32Z"/></svg>',
+  };
+
   // Drop a matching image into assets/partners/<slug>.svg (or .png) to
   // replace the fallback initials badge below - no code changes needed.
   const PARTNERS = [
@@ -198,7 +206,7 @@
 
   function renderSocials(container, list) {
     container.innerHTML = list.map((s) =>
-      `<a href="${s.url}" target="_blank" rel="noopener">${escapeHtml(s.label)}</a>`
+      `<a href="${s.url}" target="_blank" rel="noopener"><span class="social-icon">${SOCIAL_ICONS[s.label] || ""}</span>${escapeHtml(s.label)}</a>`
     ).join("");
   }
 

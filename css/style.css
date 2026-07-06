@@ -203,12 +203,16 @@ img { max-width: 100%; display: block; }
 .btn-outline-on-brand { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.4); }
 .social-row { display: flex; gap: var(--space-6); flex-wrap: wrap; }
 .social-row a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
   color: var(--text-secondary);
   text-decoration: none;
   font: 500 13px/1.5 var(--font-body);
   border-bottom: 1px solid var(--border-default);
   padding-bottom: 2px;
 }
+.social-icon { display: inline-flex; }
 .social-row-on-brand a { color: rgba(255,255,255,0.85); border-bottom-color: rgba(255,255,255,0.4); }
 
 /* Hero */
